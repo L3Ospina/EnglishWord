@@ -1,9 +1,19 @@
-body{
-    background-color: black;
+Body{
+    background-image: url("/Estilos/RepetitivoF.png");
+    background-size: 100%;
     color: bisque;
+}
+body::before{
+    background-color: black;
 }
 
 /*-------------------------------------*/
+
+main{
+    display: flex;/*NO SE*/
+    justify-content: center;/*Aliena al centro*/
+}
+
 
 .Logo svg{
     position: absolute;/*fixed, relative, sticky posicion en relacion
@@ -22,7 +32,7 @@ body{
     outline-style: double;/*Linea fuera del borde*/
     outline-width: 5px;/*Grosor*/
     outline-color: aliceblue;/*Color*/
-
+    outline-offset: 2px;
 
 }
 
@@ -32,45 +42,69 @@ body{
 
     text-align: center;/*Alinea Textos*/
     text-transform: capitalize;/*Tranforma el texto*/
-    font-size: 50px/*Tamaño de la fuente*/
+    font-size: 60px/*Tamaño de la fuente*/
 
 }
 
 .Presentacion{
-
     min-width: 520px;/*Ancho minimo*/
-    max-width: 520px;/*Ancho miximo*/
 
     border-color: grey;/*Color del borde*/
     border-radius: 70px;/*Radio de los vordes*/
     border-style: solid;/*Estilo del borde*/
     padding: 11px 15px;/*Relleno de adentro a fuera*/
+
 }
 
+/*----------------------------------------------------------------------*/
+
+hr{/*La raya*/
+    width: 40%;/*El ancho*/
+    margin: 30px  auto;/*Margen*/
+}
 
 /*----------------------------------------------------------------------*/
 .Palabra h2{
     font-style: italic;/*Estilo fuente*/
     text-align: center;/*Alineacion*/
     text-transform: capitalize;/*tranformo a capital inicial*/
-    font-size: 35px;/*Tamaño funete*/
+    font-size: 55px;/*Tamaño funete*/
 }
-.Palabra:hover{ /*Cambia de color cursor encima*/
-    color: red;/*color de la funete*/
+.Palabra:hover h2{ /*Cambia de color cursor encima*/
+    color: rgb(22, 171, 129);/*color de la funete*/
+    transition: color 1s; /*Transicion del color*/
 }
 
 /*----------------------------------------------------------------------*/
 
-.Ejemplos li{ /*modificando la li*/
-    list-style-type: circle;/*Tipo de punto lista*/
+.Explicacion{
+    text-align: center;/*Alinear al centro*/
+    font-size: 30px;/*Tamaño de fuente*/
 }
-.Ejemplos{ /*modificando la lu*/
+.Explicacion::first-letter {/*Modificar la primara letra*/
+    text-transform: uppercase; /*Mayuscula*/
+}
+
+/*----------------------------------------------------------------------*/
+
+.Ejemplos li{ /*Modificando la li*/
+    list-style-type: circle;/*Tipo de punto lista*/
+    list-style-position: inside;/*Los circulos dentro de la caja*/
+    font-size: 25px;/*Tamaño de fuente*/
+}
+.Ejemplos li::first-letter{/*Modificar la primara letra*/
+    text-transform: uppercase; /*Mayuscula*/
+}
+
+.Ejemplos{ /*Modificando la lu*/
+    text-align: center;/*Alinear al centro*/
+    font-style: italic;/*Estilo de funte*/
 
     padding: 0px;/*Relleno*/
-    margin: 2%;/*Mrgen*/
+    margin: 60px auto auto auto;/*Mrgen*/
 }
 
 /*---------------------------------------------------------------------*/
 
-
 /*propiedad overflow, cocultar contenido fuera de rango W y H*/
+
