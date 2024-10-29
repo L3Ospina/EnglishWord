@@ -1,10 +1,13 @@
 Body{
-    background-image: url("/Estilos/RepetitivoF.png");
-    background-size: 100%;
-    color: bisque;
+    background-image: url("/Estilos/RepetitivoF.png");/*Imagen de fondo*/
+    background-size: 790px;/*Tamaño y repeticion*/
+    color: bisque;/*Color de la letra en general*/
+    margin: 0px;/*Margen*/
 }
-body::before{
-    background-color: black;
+.FondoN{
+    background-color: rgba(51, 8, 88, 0.315);/*Capa oscura*/
+    width: 100%;/*Ancho*/
+    height: 100vh;/*Alto pero con vh*/
 }
 
 /*-------------------------------------*/
@@ -16,13 +19,13 @@ main{
 
 
 .Logo svg{
-    position: absolute;/*fixed, relative, sticky posicion en relacion
+    position: relative;/*fixed, relative, sticky posicion en relacion
     se puede acomodar con right o top*/
 
     height: 90px;/*Largo*/
     width: 90px;/*Ancho*/
     
-    background-color: rgb(0, 0, 0);/*colorRGB Alpha*/
+    background-color: rgba(0, 0, 0, 0.509);/*colorRGB Alpha*/
 
     border-color: rgb(132, 45, 183);/*Color del borde*/
     border-radius: 50%; /*Radio de los vordes*/
@@ -49,18 +52,24 @@ main{
 .Presentacion{
     min-width: 520px;/*Ancho minimo*/
 
-    border-color: grey;/*Color del borde*/
     border-radius: 70px;/*Radio de los vordes*/
-    border-style: solid;/*Estilo del borde*/
-    padding: 11px 15px;/*Relleno de adentro a fuera*/
+    
+    padding: 11px 30px;/*Relleno de adentro a fuera*/
+
+    margin-top: 30px;/*Margen de arriba*/
+    background-color: rgba(108, 108, 108, 0.423);/*Fondo Cor*/
+
+    /*------Organizar los dos elementos-------*/
+
 
 }
 
 /*----------------------------------------------------------------------*/
 
 hr{/*La raya*/
-    width: 40%;/*El ancho*/
+    width: 520px;/*Ancho minimo*/
     margin: 30px  auto;/*Margen*/
+    border-style: solid;
 }
 
 /*----------------------------------------------------------------------*/
