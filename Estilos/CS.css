@@ -5,23 +5,36 @@ Body{
     margin: 0px;/*Margen*/
 }
 .FondoN{
-    background-color: rgba(51, 8, 88, 0.315);/*Capa oscura*/
+    background-color: rgba(27, 4, 47, 0.425);/*Capa oscura*/
     width: 100%;/*Ancho*/
     height: 100vh;/*Alto pero con vh*/
 }
 
 /*-------------------------------------*/
-
 main{
-    display: flex;/*NO SE*/
-    justify-content: center;/*Aliena al centro*/
+    display: flex; /*tipo de display*/
+    justify-content: center;/*centrar contenido*/
 }
 
+.Presentacion{
+    /*------Organizar los dos elementos-------*/
+    display: flex; /*tipo de display*/
+    justify-content: center;/*centrar contenido*/
+
+    min-width: 630px;/*Ancho minimo*/
+    max-width: 520px;/*Ancho maximo*/
+
+    border-radius: 70px;/*Radio de los vordes*/
+    
+    padding: 11px 0px;/*Relleno de adentro a fuera*/
+
+    margin: 50px 0px 0px 0px;/*Margen de arriba*/
+    background-color: rgba(108, 108, 108, 0.423);/*Fondo Cor*/
+}
 
 .Logo svg{
-    position: relative;/*fixed, relative, sticky posicion en relacion
-    se puede acomodar con right o top*/
-
+    
+    margin: 5px 5px 5px 20px;/*Margen*/
     height: 90px;/*Largo*/
     width: 90px;/*Ancho*/
     
@@ -35,33 +48,16 @@ main{
     outline-style: double;/*Linea fuera del borde*/
     outline-width: 5px;/*Grosor*/
     outline-color: aliceblue;/*Color*/
-    outline-offset: 2px;
-
+    outline-offset: 2px;/*distancia de la linea*/
 }
 
 .Titulo h1{
-    color: rgb(172, 42, 187);
-    margin: 20px 0px 20px 90px;/*Mod margen*/
+    color: rgb(172, 42, 187);/*Color letra*/
+    margin: 20px 20px 0px 20px;/*Mod margen*/
 
     text-align: center;/*Alinea Textos*/
     text-transform: capitalize;/*Tranforma el texto*/
     font-size: 60px/*Tamaño de la fuente*/
-
-}
-
-.Presentacion{
-    min-width: 520px;/*Ancho minimo*/
-
-    border-radius: 70px;/*Radio de los vordes*/
-    
-    padding: 11px 30px;/*Relleno de adentro a fuera*/
-
-    margin-top: 30px;/*Margen de arriba*/
-    background-color: rgba(108, 108, 108, 0.423);/*Fondo Cor*/
-
-    /*------Organizar los dos elementos-------*/
-
-
 }
 
 /*----------------------------------------------------------------------*/
@@ -69,7 +65,7 @@ main{
 hr{/*La raya*/
     width: 520px;/*Ancho minimo*/
     margin: 30px  auto;/*Margen*/
-    border-style: solid;
+    border-style: solid;/*Estilo de borde*/
 }
 
 /*----------------------------------------------------------------------*/
@@ -78,10 +74,13 @@ hr{/*La raya*/
     text-align: center;/*Alineacion*/
     text-transform: capitalize;/*tranformo a capital inicial*/
     font-size: 55px;/*Tamaño funete*/
+    transition: text-shadow 1s;/*transition: text 1s; /*Transicion del color*/
 }
 .Palabra:hover h2{ /*Cambia de color cursor encima*/
-    color: rgb(22, 171, 129);/*color de la funete*/
-    transition: color 1s; /*Transicion del color*/
+    
+    /*color: rgb(22, 171, 129);/*color de la funete*/
+    text-shadow: rgb(255, 147, 230) 0px 0 20px;/*sombraLet*/
+    
 }
 
 /*----------------------------------------------------------------------*/
