@@ -12,14 +12,16 @@ Body{
 
 /*-------------------------------------*/
 main{
+    /*------Organizar los dos elementos-------*/
     display: flex; /*tipo de display*/
     justify-content: center;/*centrar contenido*/
 }
 
 .Presentacion{
     /*------Organizar los dos elementos-------*/
-    display: flex; /*tipo de display*/
-    justify-content: center;/*centrar contenido*/
+
+    display: grid; /*tipo de display*/
+    grid-template-columns: auto auto; /*2 columnas*/    
 
     min-width: 630px;/*Ancho minimo*/
     max-width: 520px;/*Ancho maximo*/
@@ -115,4 +117,3 @@ hr{/*La raya*/
 /*---------------------------------------------------------------------*/
 
 /*propiedad overflow, cocultar contenido fuera de rango W y H*/
-
