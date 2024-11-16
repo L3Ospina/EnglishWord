@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyEnglish</title>
 
+    <link rel="preload" href="/Estilos/Normalize.css" as="style">
+    <link rel="stylesheet" href="/Estilos/Normalize.css">
+
     <link rel="preload" href="Estilos/CS.css" as="style">
     <link rel="stylesheet" href="Estilos/CS.css">
-
-    <script src="Script/Actualizador.js" defer></script>
-    <!--El defer es para cargar en paralelo con el HTML-->
 
 </head>
 
 <body>
-    <section class="FondoN">
-        
-        <main>
-            <header class="Presentacion">
-                <div class="Logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="88"
-                        height="88" viewBox="0 0 24 24" stroke-width="2" stroke="#a905b6" fill="none"
+
+    <div class="fondo">
+
+        <div class="contenedor">
+
+            <div class="marco_titulo">
+
+                <header class="header">
+
+                    <svg class="logo" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language"
+                        width="88" height="88" viewBox="0 0 24 24" stroke-width="2" stroke="#a905b6" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M4 5h7" />
@@ -30,28 +34,39 @@
                         <path d="M12 20l4 -9l4 9" />
                         <path d="M19.1 18h-6.2" />
                     </svg>
-                </div>
-                <div class="Titulo">
-                    <h1>word of the day</h1>
-                </div>
-            </header>
-        </main>
-        <hr>
-        <section>
-            <div class="Palabra">
-                <h2>meet/met/met</h2>
+
+                    <h1 class="titulo">word of the day</h1>
+                </header>
+            </div>
+            <hr class="division">
+        </div>
+        
+
+        <main>
+            <h2 class="palabra">meet/met/met</h2>
+
+
+            <p class="explicacion"> verbo conocer a alguien - reunirse</p>
+
+            <div class="contenedor_lista">
+
+                <ul class="lista"><!--Las li deben estar e una ul-->
+
+                    <div class="ejemplos">
+
+                        <li>i gonna <b>meet</b> with my friends</li>
+                        <li>i<b> met</b> a new girl</li>
+                        <li>he has <b>met</b> to my grandmother</li>
+                    </div>
+                </ul>
             </div>
 
-            <p class="Explicacion"> verbo conocer a alguien - reunirse</p>
+        </main>
 
-            <ul class="Ejemplos"><!--Las li deben estar e una ul-->
-                <li>i gonna <b>meet</b> with my friends</li>
-                <li>i<b> met</b> a new girl</li>
-                <li>he has <b>met</b> to my grandmother</li>
-            </ul>
-        </section>
-        
-    </section>
+        <footer class="footer">
+            <h3>Derechos reservados 2024</h3>
+        </footer>
+    </div>
 </body>
 
 </html>

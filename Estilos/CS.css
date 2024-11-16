@@ -1,119 +1,150 @@
-Body{
-    background-image: url("/Estilos/RepetitivoF.png");/*Imagen de fondo*/
-    background-size: 790px;/*Tamaño y repeticion*/
-    color: bisque;/*Color de la letra en general*/
-    margin: 0px;/*Margen*/
+/*PREVAR*/
+:root{
+    --colorPrimario: rgb(172, 42, 187);
+    --colorSecundario: bisque;
 }
-.FondoN{
+
+/*GENERAL*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+Body{
+    background-image: url("/Imaenes/RepetitivoF.png");/*Imagen de fondo*/
+    background-size: 50rem;
+    color: var(--colorSecundario);/*Color de la letra en general*/
+
+}
+
+.fondo{
     background-color: rgba(27, 4, 47, 0.425);/*Capa oscura*/
     width: 100%;/*Ancho*/
     height: 100vh;/*Alto pero con vh*/
+    padding: 2rem;
 }
 
-/*-------------------------------------*/
-main{
-    /*------Organizar los dos elementos-------*/
-    display: flex; /*tipo de display*/
-    justify-content: center;/*centrar contenido*/
-}
 
-.Presentacion{
-    /*------Organizar los dos elementos-------*/
+/*TITULO*/
 
-    display: grid; /*tipo de display*/
-    grid-template-columns: auto auto; /*2 columnas*/    
-
-    min-width: 630px;/*Ancho minimo*/
-    max-width: 520px;/*Ancho maximo*/
-
-    border-radius: 70px;/*Radio de los vordes*/
-    
-    padding: 11px 0px;/*Relleno de adentro a fuera*/
-
-    margin: 50px 0px 0px 0px;/*Margen de arriba*/
+.marco_titulo{
+    border-radius: 50px;/*Radio de los vordes*/
+    padding: 2rem 0px;/*Relleno de adentro a fuera*/
     background-color: rgba(108, 108, 108, 0.423);/*Fondo Cor*/
+    text-align: center;
 }
 
-.Logo svg{
-    
-    margin: 5px 5px 5px 20px;/*Margen*/
-    height: 90px;/*Largo*/
-    width: 90px;/*Ancho*/
+
+@media (min-width: 768px) {
+    .contenedor{
+        width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+.header{
+    display: inline-block;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+}
+
+.logo{
+    min-width: 9rem;/*Ancho*/
     
     background-color: rgba(0, 0, 0, 0.509);/*colorRGB Alpha*/
 
-    border-color: rgb(132, 45, 183);/*Color del borde*/
+    border-color: var(--colorPrimario);/*Color del borde*/
     border-radius: 50%; /*Radio de los vordes*/
     border-style: solid;/*Estilo del borde*/
     border-width: 5px;/*Grosor del borde*/
 
     outline-style: double;/*Linea fuera del borde*/
     outline-width: 5px;/*Grosor*/
-    outline-color: aliceblue;/*Color*/
+    outline-color: rgba(240, 248, 255, 0.242);/*Color*/
     outline-offset: 2px;/*distancia de la linea*/
 }
 
-.Titulo h1{
-    color: rgb(172, 42, 187);/*Color letra*/
-    margin: 20px 20px 0px 20px;/*Mod margen*/
+.titulo{
+    color: var(--colorPrimario);/*Color letra*/
 
-    text-align: center;/*Alinea Textos*/
     text-transform: capitalize;/*Tranforma el texto*/
-    font-size: 60px/*Tamaño de la fuente*/
+    font-size: 4.8rem/*Tamaño de la fuente*/
 }
 
-/*----------------------------------------------------------------------*/
 
-hr{/*La raya*/
-    width: 520px;/*Ancho minimo*/
-    margin: 30px  auto;/*Margen*/
+.division{/*La raya*/
+    margin-top: 5rem;
     border-style: solid;/*Estilo de borde*/
+    opacity: 0.5;
 }
 
-/*----------------------------------------------------------------------*/
-.Palabra h2{
+/*CONTENIDO*/
+
+/*PALABRA*/
+.palabra{
     font-style: italic;/*Estilo fuente*/
     text-align: center;/*Alineacion*/
     text-transform: capitalize;/*tranformo a capital inicial*/
-    font-size: 55px;/*Tamaño funete*/
+    font-size: 5rem;/*Tamaño funete*/
     transition: text-shadow 1s;/*transition: text 1s; /*Transicion del color*/
 }
-.Palabra:hover h2{ /*Cambia de color cursor encima*/
-    
+.palabra:hover{ /*Cambia de color cursor encima*/
+
     /*color: rgb(22, 171, 129);/*color de la funete*/
     text-shadow: rgb(255, 147, 230) 0px 0 20px;/*sombraLet*/
     
 }
 
-/*----------------------------------------------------------------------*/
+/*EXPLICACION*/
 
-.Explicacion{
+.explicacion{
     text-align: center;/*Alinear al centro*/
     font-size: 30px;/*Tamaño de fuente*/
 }
-.Explicacion::first-letter {/*Modificar la primara letra*/
+.explicacion::first-letter {/*Modificar la primara letra*/
     text-transform: uppercase; /*Mayuscula*/
 }
 
-/*----------------------------------------------------------------------*/
-
-.Ejemplos li{ /*Modificando la li*/
-    list-style-type: circle;/*Tipo de punto lista*/
-    list-style-position: inside;/*Los circulos dentro de la caja*/
-    font-size: 25px;/*Tamaño de fuente*/
-}
-.Ejemplos li::first-letter{/*Modificar la primara letra*/
-    text-transform: uppercase; /*Mayuscula*/
+.contenedor_lista{
+    display: flex;
+    justify-content: center
 }
 
-.Ejemplos{ /*Modificando la lu*/
-    text-align: center;/*Alinear al centro*/
+.lista{ /*Modificando la lu*/
+    text-align: justify;/*Alinear al centro*/
     font-style: italic;/*Estilo de funte*/
 
     padding: 0px;/*Relleno*/
-    margin: 60px auto auto auto;/*Mrgen*/
 }
 
+/*EJEMPLOS*/
+.ejemplos{ /*Modificando la li*/
+    list-style-type: circle;/*Tipo de punto lista*/
+    list-style-position: inside;/*Los circulos dentro de la caja*/
+    font-size: 2rem;/*Tamaño de fuente*/
+    line-height: 1.5;
+}
+.ejemplos li::first-letter{/*Modificar la primara letra*/
+    text-transform: uppercase; /*Mayuscula*/
+}
+
+
+.footer{
+    margin-top: 20rem;
+    text-align: center;
+}
 /*---------------------------------------------------------------------*/
 
 /*propiedad overflow, cocultar contenido fuera de rango W y H*/
